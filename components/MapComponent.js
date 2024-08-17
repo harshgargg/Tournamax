@@ -50,9 +50,9 @@ const MapComponent = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         {markers.map((marker, index) => (
-          <Marker key={index} position={marker.position} icon={customIcon} onClick={() => handleMarkerClick( marker.position )}>
-            <Popup>
-                <div >
+          <Marker key={index} position={marker.position} icon={customIcon}>
+            <Popup onClick={() => handleMarkerClick( marker.position )}>
+                <div>
                     {marker.label}
                 </div>
             </Popup>
