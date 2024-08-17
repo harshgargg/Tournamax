@@ -51,8 +51,8 @@ const MapComponent = () => {
         />
         {markers.map((marker, index) => (
           <Marker key={index} position={marker.position} icon={customIcon}>
-            <Popup onClick={() => handleMarkerClick( marker.position )}>
-                <div>
+            <Popup>
+                <div onClick={() => handleMarkerClick( marker.position )}>
                     {marker.label}
                 </div>
             </Popup>
